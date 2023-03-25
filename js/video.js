@@ -15,7 +15,7 @@ video.removeAttribute("loop");
 
 document.getElementById("play").addEventListener("click", function(){
 	video.play();
-	document.getElementById("volume").innerHTML = document.getElementById("slider").value;
+	document.getElementById("volume").innerHTML = document.getElementById("slider").value + "%";
 })
 
 document.getElementById("pause").addEventListener("click", function(){
@@ -56,7 +56,7 @@ document.getElementById("mute").addEventListener("click", function(){
 
 document.getElementById("slider").oninput = function(){
 	video.volume = document.getElementById("slider").value * 0.01;
-	document.getElementById("volume").innerHTML = document.getElementById("slider").value;
+	document.getElementById("volume").innerHTML = document.getElementById("slider").value + "%";
 }
 
 document.getElementById("vintage").addEventListener("click", function(){
